@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4 text-white">
+  <h3 class="text-center mb-4">📊 Expense Visualizations</h3>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <div class="text-end mb-3">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-outline-light btn-sm">
+      ⬅️ Back to Dashboard
+    </a>
+  </div>
+
+  <div class="card bg-dark text-white shadow p-3 mb-4">
+    <h5 class="text-center">🥧 Expenses by Category</h5>
+    {{ pie_html | safe }}
+  </div>
+
+  <div class="card bg-dark text-white shadow p-3 mb-4">
+    <h5 class="text-center">📊 Category-wise Expense Bar Graph</h5>
+    {{ bar_html | safe }}
+  </div>
+
+  <div class="card bg-dark text-white shadow p-3">
+    <h5 class="text-center">📈 Daily Expense Trend</h5>
+    {{ line_html | safe }}
+  </div>
+</div>
+{% endblock %}

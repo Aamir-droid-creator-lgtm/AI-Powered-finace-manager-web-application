@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-3">📘 Financial Education</h2>
+  <hr>
+
+  <!-- 50-30-20 Budget Rule Card -->
+  <div class="card mb-4">
+    <div class="card-header bg-info text-white">
+      50-30-20 Budget Rule
+    </div>
+    <div class="card-body text-center">
+      <img src="{{ url_for('static', filename='tips/50-30-20.jpg') }}" class="img-fluid rounded mb-3" alt="Budget Rule">
+      <p>
+        The 50/30/20 Rule is a popular guideline for managing your budget. It suggests you spend:
+        <strong>50%</strong> of your income on needs,
+        <strong>30%</strong> on wants, and
+        <strong>20%</strong> on savings.
+      </p>
+    </div>
+  </div>
+
+  <!-- Overspending Tips Card -->
+  <div class="card mb-4">
+  <div class="card-header bg-warning text-white">
+    💳 Avoid Overspending Tips
+  </div>
+  <div class="card-body p-0">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Track expenses weekly.</li>
+      <li class="list-group-item">Set realistic budgets.</li>
+      <li class="list-group-item">Use alerts for over-budget items.</li>
+      <li class="list-group-item">Review recurring expenses monthly.</li>
+      <li class="list-group-item">Use cash instead of credit to control impulse spending.</li>
+      <li class="list-group-item">Prioritize needs over wants when budgeting.</li>
+      <li class="list-group-item">Avoid shopping when stressed or bored.</li>
+      <li class="list-group-item">Limit subscriptions and auto-renewals.</li>
+      <li class="list-group-item">Set daily or weekly spending limits.</li>
+      <li class="list-group-item">Always compare prices before big purchases.</li>
+    </ul>
+  </div>
+</div>
+
+  <!-- Back Button -->
+  <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">⬅ Back to Dashboard</a>
+</div>
+{% endblock %}

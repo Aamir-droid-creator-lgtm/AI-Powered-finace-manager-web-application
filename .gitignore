@@ -1,0 +1,50 @@
+# Python Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python environment files
+*.egg-info/
+*.egg
+.eggs/
+
+# SQLite database (optional – comment out if you want to version control it)
+*.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# PyCharm files
+.idea/
+
+# Log files
+*.log
+
+# Environment variables (e.g., for secrets)
+.env
+
+# Compiled files
+*.so
+*.dll
+*.o
+*.a
+
+# Export files
+*.xlsx
+*.pdf
+
+# Cache
+.cache/
